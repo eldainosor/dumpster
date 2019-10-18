@@ -78,3 +78,7 @@ So, as you can see, all the strings has a prefix before the theme ID (roblox in 
 Also, for previewing sake, you have to add another drawable of your wallpaper but smaller, and speacify the name on the theme_wallpaper_thumbnail_themeid string, so it can be shown on the preview on ThemePicker. In the case of theme_wallpaper_themeid you can use a drawable or a live wallpaper special activity, and some options. Don't know a lot about the latter one, so that's it.
 
 Remember to do the overlays for everything, do the stub theme app and the required overlays, and let's have fun theming!
+
+
+SPECIAL CREDITS:
+paphonb, Pixel Stock Q Image, AOSP Project
