@@ -75,6 +75,6 @@ Let's make an example about a theme i'll codename *roblox* on the strings and th
     <string name="theme_wallpaper_title_roblox">Minecraft Steve</string>
     <string name="theme_wallpaper_attribution_roblox">Mojang/DeviantArt - 2017 </string>
 So, as you can see, all the strings has a prefix before the theme ID (roblox in this case), and all those overlays are requires to tell the [DefaultThemeProvider](https://android.googlesource.com/platform/packages/apps/ThemePicker/+/refs/tags/android-10.0.0_r5/src/com/android/customization/model/theme/DefaultThemeProvider.java)  what are all those overlays that are needed for our theme to enable/disable when you play with them.
-Also, for previewing sake, you have to add a drawable called Wallpaper_Thumb_ThemeTitle (in this case Wallpaper_Thumb_OOF) to display the preview on ThemePicker. In the case of theme_wallpaper you can use a drawable or a live wallpaper special activity, and some options. Don't know a lot about the latter one, so that's it.
+Also, for previewing sake, you have to add another drawable of your wallpaper but smaller, and speacify the name on the theme_wallpaper_thumbnail_themeid string, so it can be shown on the preview on ThemePicker. In the case of theme_wallpaper_themeid you can use a drawable or a live wallpaper special activity, and some options. Don't know a lot about the latter one, so that's it.
 
 Remember to do the overlays for everything, do the stub theme app and the required overlays, and let's have fun theming!
