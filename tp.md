@@ -13,11 +13,12 @@ All these 3 things are required to get it working. The theme stub will tell the 
 
 ### A new app: The Theme Stub
 This is the most essential thing for themepicker because the theme stub is a package that holds all the theme info, like packages and strings.
-Every theme will hold a special ID, and as an addition, you have to create a default theme. You have to specify a value on all the possible theme stirngs, else the app will crash (haha, yes, great code work big G).
+Every theme will hold a special ID, and as an addition, you have to create a default theme. You have to specify a value on all the possible theme strings, else the app will crash (haha, yes, great code work big G).
 
 Let's make an example about a theme i'll codename *roblox* on the strings and the theme name will be *OOF*. I have to set the strings on the following way:
 
     <string name="theme_name_roblox">OOF</string>
+    <string name="theme_title_roblox">@string/theme_name_roblox</string>
     <string name="theme_overlay_color_roblox">com.android.theme.color.red</string>
     <string name="theme_overlay_font_roblox">com.android.theme.font.rbx</string>
     <string name="theme_overlay_icon_android_roblox">com.android.theme.icon_pack.square.android</string>
@@ -26,14 +27,14 @@ Let's make an example about a theme i'll codename *roblox* on the strings and th
     <string name="theme_overlay_icon_sysui_roblox">com.android.theme.icon_pack.square.systemui</string>
     <string name="theme_overlay_icon_themepicker_roblox">com.android.theme.icon_pack.square.themepicker</string>
     <string name="theme_overlay_shape_roblox">com.android.theme.icon.square</string>
-    <string name="theme_title_roblox">@string/theme_name_roblox</string>
+    <!-- Special Strings for wallpaper info and drawable -->
     <item type="drawable" name="theme_wallpaper_roblox">@drawable/minecraftsteve</item>
     <item type="drawable" name="theme_wallpaper_thumbnail_roblox">@drawable/smallsteve</item>
     <string name="theme_wallpaper_title_roblox">Minecraft Steve</string>
     <string name="theme_wallpaper_attribution_roblox">Mojang/DeviantArt - 2017 </string>
 
 So, as you can see, all the strings has a prefix before the theme ID (roblox in this case), and all those overlays are requires to tell the [DefaultThemeProvider](https://android.googlesource.com/platform/packages/apps/ThemePicker/+/refs/tags/android-10.0.0_r5/src/com/android/customization/model/theme/DefaultThemeProvider.java)  what are all those overlays that are needed for our theme to enable/disable when you play with them.
-Also, for previewing sake, you have to add another drawable of your wallpaper but smaller, and speacify the name on the theme_wallpaper_thumbnail_themeid string, so it can be shown on the preview on ThemePicker. In the case of theme_wallpaper_themeid you can use a drawable or a live wallpaper special activity, and some options. Don't know a lot about the latter one, so that's it.
+Also, for previewing sake, you have to add another drawable of your wallpaper but smaller, and speacify the name on the theme_wallpaper_thumbnail_themeid item, so it can be shown on the preview on ThemePicker. In the case of theme_wallpaper_themeid you can use a drawable or a live wallpaper special activity, and some options. Don't know a lot about the latter one.
 
 ### Your styles: The overlays for every theme
 This is basically all the overlays required for the theme. 
